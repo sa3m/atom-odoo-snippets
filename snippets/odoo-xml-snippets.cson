@@ -187,6 +187,29 @@
 		'prefix': 'oo_domain'
 		'body': 'domain="[(\'$1\', \'=\', $2), ]"'
 
+
+# Template
+
+	'Add template':
+		'prefix': 'oo_template'
+		'body': """
+			<template id="$1" inherit_id="$2">
+				$3
+			</template>
+		"""
+
+	'Add xpath':
+		'prefix': 'oo_xpath'
+		'body': """
+			<xpath expr="$1" position="$2">
+				$3
+			</xpath>
+		"""
+
+	'Add attribute':
+		'prefix': 'oo_attribute'
+		'body': '<attribute name="$1">$2</attribute>'
+
 # Security
 
 	'Create security category':
