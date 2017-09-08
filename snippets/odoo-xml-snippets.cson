@@ -8,7 +8,15 @@
 		</odoo>
 		"""
 
-# Form, tree and search view creation
+# Empty record, form, tree and search view creation
+
+	'Create record':
+		'prefix': 'oo_record'
+		'body': """
+			<record id="$1" model="$2">
+				$3
+			</record>
+		"""
 
 	'Create form view':
 		'prefix': 'oo_form'
@@ -292,4 +300,16 @@
 				<field name="message_follower_ids" widget="mail_followers"/>
 				<field name="message_ids" widget="mail_thread"/>
 			</div>
+		"""
+
+	'Add Report':
+		'prefix': 'oo_report'
+		'body': """
+			<report
+				id="$1"
+				model="$2"
+				string="$3"
+				report_type="${4:qweb-pdf}"
+				name="$5"
+		    	/>
 		"""
